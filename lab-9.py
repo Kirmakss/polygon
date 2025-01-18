@@ -1,10 +1,10 @@
 import numpy as np
 #два массива для теста
-arr1 = np.array([1, 2, 3, 4, 5])
-arr2 = np.array([5, 4, 3, 2, 1])
+arr1 = np.unique(np.array([1, 2, 3, 4, 5]))
+arr2 = np.unique(np.array([5, 4, 3, 2, 1,7,8,7,1]))
 
 #unique возвращает уникальные элементы массива в сортированном порядке
-#array_equal поэлементно проверяет равны ли два массива и одинаковый ли порядок
-otvet = np.array_equal(np.unique(arr1), np.unique(arr2))
+#intersect1d возвращает пересечение
 
+otvet = np.intersect1d(arr1,arr2)
 print("Содержат одинаковые элементы:", otvet)
